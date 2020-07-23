@@ -8,5 +8,5 @@ void main() {
   ];
 
   final prompter = Prompter();
-  final usersPick = prompter.ask('What color do you like', options);
+  prompter.askBinary('do you like it');
 }
