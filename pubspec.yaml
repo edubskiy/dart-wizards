@@ -1,3 +1,8 @@
-name: wizard_dub.ski
+name: wizard_dub_ski
 version: 0.0.1
-description: Library to create CLI wizards
+description:
+  Library to create CLI wizards by Zhenya Dubskiy <e.dubskiy@gmail.com>
+homepage: https://github.com/edubskiy
+
+environment:
+  sdk: '<3.0.0'
