@@ -1,5 +1,4 @@
-import 'package:wizard_dub.ski/src/option.dart';
-import 'package:wizard_dub.ski/src/prompter.dart';
+import 'package:wizard_dub.ski/wizard_dub.ski.dart';
 
 void main() {
   List<Option> options = [

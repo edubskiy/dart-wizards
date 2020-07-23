@@ -5,7 +5,7 @@ final Terminal _terminal = const Terminal();
 
 class Prompter {
   askMultiple(String prompt, List<Option> options) {
-    final input = ask(prompt, options);
+    final input = _ask(prompt, options);
 
     try {
       return options[int.parse(input)].value;
@@ -15,12 +15,12 @@ class Prompter {
   }
 
   bool askBinary(String prompt) {
-    final input = ask('$prompt [y/n]', []);
+    final input = _ask('$prompt [y/n]', []);
 
     return input.contains('y');
   }
 
-  ask(String prompt, List<Option> options) {
+  _ask(String prompt, List<Option> options) {
     _terminal.clearScreen();
     _terminal.printPrompt(prompt);
     _terminal.printOptions(options);
