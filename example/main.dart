@@ -1,12 +1,12 @@
-import 'package:wizard_dub.ski/src/terminal.dart';
 import 'package:wizard_dub.ski/src/option.dart';
+import 'package:wizard_dub.ski/src/prompter.dart';
 
 void main() {
-  final terminal = Terminal();
+  List<Option> options = [
+    Option('I want red', '#f00'),
+    Option('I want blue', '#00f'),
+  ];
 
-  var options = [Option('I want red', '#f00'), Option('I want blue', '#00f')];
-
-  terminal.printOptions(options);
-  var response = terminal.collectInput();
-  print(response);
+  final prompter = Prompter();
+  final usersPick = prompter.ask('What color do you like', options);
 }
